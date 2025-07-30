@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ePharmacy.Domain.Enums;
-internal class CardType
+﻿namespace ePharmacy.Domain.Enums;
+public enum CardType
 {
+    UzCard = 0,
+    Humo = 1,
+    Visa = 2,
+    MasterCard = 3,
 }

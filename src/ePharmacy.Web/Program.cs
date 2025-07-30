@@ -1,4 +1,6 @@
 
+using ePharmacy.Web.Configurations;
+
 namespace ePharmacy.Web
 {
     public class Program
@@ -13,6 +15,9 @@ namespace ePharmacy.Web
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.ConfigureDB();
+            builder.ConfigureJwtAuth();
 
             var app = builder.Build();
 

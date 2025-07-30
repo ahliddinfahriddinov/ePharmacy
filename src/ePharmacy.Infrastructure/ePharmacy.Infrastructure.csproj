@@ -23,4 +23,8 @@
     <ProjectReference Include="..\ePharmacy.Application\ePharmacy.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistence\Repositories\" />
+  </ItemGroup>
+
 </Project>

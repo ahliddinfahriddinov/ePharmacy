@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ePharmacy.Domain.Entities;
-internal class Cart
+﻿namespace ePharmacy.Domain.Entities;
+public class Cart : BaseEntity
 {
+    public long CartId { get; set; }
+    public decimal TotalAmount { get; set; }
+    public bool IsActive { get; set; } = true;
+
+    public long UserId { get; set; }
+    public User User { get; set; }
+
+    public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 }

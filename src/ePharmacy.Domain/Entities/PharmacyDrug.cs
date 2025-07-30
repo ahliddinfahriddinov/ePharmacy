@@ -1,13 +1,11 @@
 ﻿namespace ePharmacy.Domain.Entities;
-public class CartItem : BaseEntity
+public class PharmacyDrug : BaseEntity
 {
-    public long CartItemId { get; set; }
-    public int Quantity { get; set; }
+    public long PharmacyDrugId { get; set; }
     public decimal Price { get; set; }
-    public string Notes { get; set; }
-
-    public long CartId { get; set; }
-    public Cart Cart { get; set; }
+    public int StockQuantity { get; set; }
+    public DateTime? ExpiryDate { get; set; }
+    public bool IsAvailable { get; set; } = true;
 
     public long PharmacyId { get; set; }
     public Pharmacy Pharmacy { get; set; }
